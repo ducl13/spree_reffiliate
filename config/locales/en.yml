@@ -59,3 +59,9 @@ en:
       referral_setting:
         credits_to_be_awarded: Store Credits for referral
         referral_credit_status: Referral benefit enabled
+    order_mailer:
+      confirm_order_email:
+        dear_affiliate: Dear Affiliate,
+        instructions: You have an affiliate order for your records.
+        order_summary: Order %{number} Summary
+        subject: Affiliate Order Confirmation
