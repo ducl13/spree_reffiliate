@@ -11,7 +11,12 @@ module Spree
       affiliate = Spree::Affiliate.find_by(path: params[:path])
       flash[:success] = Spree.t(:affiliate_code_applied) unless affiliate.nil?
       if affiliate.nil? or affiliate.partial.blank? or !partial_exists affiliate.partial
-        redirect_to(root_path)
+        if params[:redirect_path].present?
+          redirect_path = url_for('/' + params[:redirect_path])
+          redirect_to(redirect_path)
+        else
+          redirect_to(root_path)
+        end
       elsif partial_exists affiliate.partial
         render "spree/affiliates/#{affiliate.partial}", layout: affiliate.get_layout
       end
