@@ -20,7 +20,7 @@
 <% end %>
 
 <% if @user.associated_partner.present? %>
-  <dt>Affilate URL</dt>
+  <dt>Affiliate URL</dt>
   <dd class='col-md-6 row'>
     <div class="input-group">
       <input type='text' data-coupon-code=true value='<%= @user.associated_partner.redirect_path.present? ? redirect_affiliate_url(@user.associated_partner.redirect_path, @user.associated_partner.path) : affiliate_url(@user.associated_partner.path) %>' class='form-control' readonly />
@@ -31,7 +31,7 @@
   </dd>
   <br><br><br>
   <div>
-    <dt>Affilate Order Count</dt>
+    <dt>Affiliate Order Count</dt>
     <dd><%= @user.associated_partner.transactions.count %></dd>
   </div>
   <br/>
