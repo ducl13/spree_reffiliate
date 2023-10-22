@@ -65,3 +65,4 @@ en:
         instructions: You have an affiliate order for your records.
         order_summary: Order %{number} Summary
         subject: Affiliate Order Confirmation
+    redirect_path: Redirect Path (i.e. category path)

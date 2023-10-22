@@ -23,7 +23,7 @@
   <dt>Affilate URL</dt>
   <dd class='col-md-6 row'>
     <div class="input-group">
-      <input type='text' data-coupon-code=true value='<%= affiliate_url(@user.associated_partner.path) %>' class='form-control' readonly />
+      <input type='text' data-coupon-code=true value='<%= @user.associated_partner.redirect_path.present? ? redirect_affiliate_url(@user.associated_partner.redirect_path, @user.associated_partner.path) : affiliate_url(@user.associated_partner.path) %>' class='form-control' readonly />
       <span class="input-group-btn">
         <button class="btn btn-primary" data-copy-coupon-code=true type="button" title='Copy to clipboard'><span class='glyphicon glyphicon-copy'></span></button>
       </span>
