@@ -30,6 +30,13 @@
     </div>
   </dd>
   <br><br><br>
+  <% if @user.associated_partner.promotion_code.present? %>
+  <div>
+    <dt>Affiliate Promotion Code</dt>
+    <dd><%= @user.associated_partner.promotion_code %></dd>
+  </div>
+  <br>
+  <% end %>
   <div>
     <dt>Affiliate Order Count</dt>
     <dd><%= @user.associated_partner.transactions.count %></dd>
