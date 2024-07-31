@@ -20,7 +20,7 @@ Spree::User.class_eval do
   end
 
   def referred_count
-    referral.referred_records.count
+    referral&.referred_records&.count
   end
 
   def referred?

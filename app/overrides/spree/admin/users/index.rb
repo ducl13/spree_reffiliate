@@ -9,6 +9,6 @@ Deface::Override.new(
   virtual_path: "spree/admin/users/index",
   name: "referral_code",
   insert_before: "[data-hook='admin_users_index_rows'] td:nth-child(2)",
-  text: "<td><%= user.referred_count %></td>",
+  text: "<td><%= user&.referred_count %></td>",
   original: '511aac3073f5db1abe7fbedf57aaf870f0c3618f'
 )
